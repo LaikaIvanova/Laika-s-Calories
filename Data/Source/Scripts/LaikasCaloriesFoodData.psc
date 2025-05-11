@@ -37,6 +37,8 @@ Float Function GetVolume(Form foodItem)
         Return volumeButter
     ElseIf foodItem == Game.GetFormFromFile(0x00064B3F, "Skyrim.esm") ;Cabbage
         Return volumeCabbage
+    ElseIf foodItem == Game.GetFormFromFile(0x000F431B, "Skyrim.esm") ;CabbagePotatoSoup
+        Return volumeCabbagePotatoSoup
     Else
         Debug.Notification("Food not recognized: " + foodItem.GetName() + "!")
         Return 0.0 ;If Object isn't food
@@ -74,6 +76,8 @@ Float Function GetCalories(Form foodItem)
         Return caloriesButter
     ElseIf foodItem == Game.GetFormFromFile(0x00064B3F, "Skyrim.esm") ;Cabbage
         Return caloriesCabbage
+    ElseIf foodItem == Game.GetFormFromFile(0x000F431B, "Skyrim.esm") ;CabbagePotatoSoup
+        Return caloriesCabbagePotatoSoup
     Else
         Return 0.0 ;If Object isn't food
     EndIf
@@ -110,6 +114,8 @@ Float Function GetProteins(Form foodItem)
         Return proteinButter
     ElseIf foodItem == Game.GetFormFromFile(0x00064B3F, "Skyrim.esm") ;Cabbage
         Return proteinCabbage
+    ElseIf foodItem == Game.GetFormFromFile(0x000F431B, "Skyrim.esm") ;CabbagePotatoSoup
+        Return proteinCabbagePotatoSoup
     Else
         Return 0.0  ;If Object isn't food
     EndIf
@@ -146,6 +152,8 @@ Float Function GetFats(Form foodItem)
         Return fatsButter
     ElseIf foodItem == Game.GetFormFromFile(0x00064B3F, "Skyrim.esm") ;Cabbage
         Return fatsCabbage
+    ElseIf foodItem == Game.GetFormFromFile(0x000F431B, "Skyrim.esm") ;CabbagePotatoSoup
+        Return fatsCabbagePotatoSoup
     Else
         Return 0.0  ;If Object isn't food
     EndIf
@@ -182,6 +190,8 @@ Float Function GetCarbohydrates(Form foodItem)
         Return carbohydratesButter
     ElseIf foodItem == Game.GetFormFromFile(0x00064B3F, "Skyrim.esm") ;Cabbage
         Return carbohydratesCabbage
+    ElseIf foodItem == Game.GetFormFromFile(0x000F431B, "Skyrim.esm") ;CabbagePotatoSoup
+        Return carbohydratesCabbagePotatoSoup
     Else
         Return 0.0  ;If Object isn't food
     EndIf
@@ -218,6 +228,8 @@ Float Function GetProlactin(Form foodItem)
         Return prolactinButter
     ElseIf foodItem == Game.GetFormFromFile(0x00064B3F, "Skyrim.esm") ;Cabbage
         Return prolactinCabbage
+    ElseIf foodItem == Game.GetFormFromFile(0x000F431B, "Skyrim.esm") ;CabbagePotatoSoup
+        Return prolactinCabbagePotatoSoup
     Else
         Return 0.0  ;If Object isn't food
     EndIf
@@ -327,6 +339,13 @@ Float proteinCabbage = 1.1
 Float carbohydratesCabbage = 5.2
 Float fatsCabbage = 0.1
 Float prolactinCabbage = 0.0
+
+Float volumeCabbagePotatoSoup = 482.0
+Float caloriesCabbagePotatoSoup = 360.0
+Float proteinCabbagePotatoSoup = 5.6
+Float carbohydratesCabbagePotatoSoup = 39.0
+Float fatsCabbagePotatoSoup = 22.0
+Float prolactinCabbagePotatoSoup = 13.4
 
 ;/
 Float volumeSweetroll = 268.0
