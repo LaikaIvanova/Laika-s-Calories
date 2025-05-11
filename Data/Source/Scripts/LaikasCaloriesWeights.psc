@@ -72,9 +72,9 @@ Potion Property PotionBreadHalf Auto
 Potion Property PotionButter Auto
 Potion Property PotionCabbage Auto
 Potion Property PotionCabbagePotatoSoup Auto
+Potion Property PotionCabbageSoup Auto
 
 Potion Property PotionAshSoup Auto
-Potion Property PotionCabbageSoup Auto
 Potion Property PotionCarrot Auto
 Potion Property PotionCookedBeef Auto
 Potion Property PotionCookedChicken Auto
@@ -182,6 +182,7 @@ Function SetFoodCategoryName() ;Add food category labels in front of food names
 		PotionButter.SetName("Zutat: Butter")
 		PotionCabbage.SetName("Zutat: Kohl")
 		PotionCabbagePotatoSoup.SetName("Nahrung: Kartoffelkohlsuppe")
+		PotionCabbageSoup.SetName("Nahrung: Kohlsuppe")
 		;Drink
 		;Ingredients
 		IngredientSaltPile.SetName("Zutat: Salz")
@@ -255,6 +256,7 @@ Function SetRealisticWeight() ;Gives items realistic weights
 		PotionButter.SetWeight(0.11)
 		PotionCabbage.SetWeight(1.12)
 		PotionCabbagePotatoSoup.SetWeight(0.48)
+		PotionCabbageSoup.SetWeight(0.49)
 
 		PotionAshSoup.SetWeight(0.43)
 		PotionCarrot.SetWeight(0.12)
@@ -393,6 +395,7 @@ Function SetRealisticWeight() ;Gives items realistic weights
 		PotionButter.SetWeight(0.1)
 		PotionCabbage.SetWeight(0.3)
 		PotionCabbagePotatoSoup.SetWeight(0.5)
+		PotionCabbageSoup.SetWeight(0.5)
 
 		PotionAshSoup.SetWeight(0.5)
 		PotionCarrot.SetWeight(0.1)

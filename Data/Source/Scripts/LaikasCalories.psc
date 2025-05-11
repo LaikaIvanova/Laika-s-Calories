@@ -539,66 +539,6 @@ Event OnObjectEquipped(Form type, ObjectReference ref)
 	EndIf
 EndEvent
 ;/
-			;Cabbage Soup
-			ElseIf LaikaFoodCabbageSoup.Find(type) >= 0
-				If Stomach > Weight * 50
-					Stomach = 0
-					Calories = 0.0
-					Protein = 0.0
-					Carbohydrates = 0.0
-					Fats = 0.0
-					Prolactin = 0.0
-					UpdateWeight()
-					;Update Hunger
-					If (Stomach <= (Weight * (StomachCapacity / 50)) * 0.3)
-						HungerString = "Hungrig"
-					ElseIf (Stomach <= (Weight * (StomachCapacity / 50)) * 0.5)
-						HungerString = "Leicht Hungrig"
-					ElseIf (Stomach <= (Weight * (StomachCapacity / 50)) * 0.8)
-						HungerString = "Satt"
-					ElseIf (Stomach <= (Weight * (StomachCapacity / 50)) * 1.0)
-						HungerString = "Vollgestopft"
-					EndIf
-						Debug.Notification("Du hast dich vollgefressen und dich übergeben.")
-				ElseIf Stomach <= Weight * 50
-						Stomach += 490.0
-						Calories += 170.0
-						Protein += 3.4
-						Carbohydrates += 14.0
-						Fats += 12.0
-						Prolactin += 0.0
-						UpdateWeight()
-						;Update Hunger
-						If (Stomach <= (Weight * (StomachCapacity / 50)) * 0.3)
-						HungerString = "Hungrig"
-					ElseIf (Stomach <= (Weight * (StomachCapacity / 50)) * 0.5)
-						HungerString = "Leicht Hungrig"
-					ElseIf (Stomach <= (Weight * (StomachCapacity / 50)) * 0.8)
-						HungerString = "Satt"
-					ElseIf (Stomach <= (Weight * (StomachCapacity / 50)) * 1.0)
-						HungerString = "Vollgestopft"
-					EndIf
-						Debug.Notification("Status: " + HungerString + " | " + "Gewicht: " + Round(Weight, 2) + "kg")
-				ElseIf	Stomach + 490.0 > Weight * 50
-						Stomach = 0.0
-						Calories = 0.0
-						Protein = 0.0
-						Carbohydrates = 0.0
-						Fats = 0.0
-						Prolactin = 0.0
-						UpdateWeight()
-						;Update Hunger
-						If (Stomach <= (Weight * (StomachCapacity / 50)) * 0.3)
-						HungerString = "Hungrig"
-					ElseIf (Stomach <= (Weight * (StomachCapacity / 50)) * 0.5)
-						HungerString = "Leicht Hungrig"
-					ElseIf (Stomach <= (Weight * (StomachCapacity / 50)) * 0.8)
-						HungerString = "Satt"
-					ElseIf (Stomach <= (Weight * (StomachCapacity / 50)) * 1.0)
-						HungerString = "Vollgestopft"
-					EndIf
-						Debug.Notification("Du hast dich vollgefressen und dich übergeben.")
-				EndIf
 			;Carrot
 			ElseIf LaikaFoodCarrot.Find(type) >= 0
 				If Stomach > Weight * 50
